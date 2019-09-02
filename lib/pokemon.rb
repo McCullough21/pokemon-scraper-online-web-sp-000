@@ -13,6 +13,14 @@ def self.find(id, db)
   SELECT * FROM pokemon WHERE id = ?
   SQL
   DB[:conn].execute(sql, id).map do |info|
-    pokemon
+    poke = self.new
+    poke.id = pokemon[0][0]
+    poke.name = pokemon[0][1]
+    poke.type = pokemon[0][2]
+    poke.save
+    poke
+  end
+end
+
 
 end
