@@ -8,6 +8,11 @@ end
 def self.save(name, type, db)
     db.execute("INSERT INTO pokemon (name, type) VALUES (?, ?)",name, type)
 end
-
+def self.find(id, db)
+  sql = <<-SQL
+  SELECT * FROM pokemon WHERE id = ?
+  SQL
+  DB[:conn].execute(sql, id).map do |info|
+    pokemon
 
 end
