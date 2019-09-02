@@ -7,3 +7,4 @@ def self.initialize(id:, name:, type:, db:)
   self.type = type
   self.db = db
 end
+end
