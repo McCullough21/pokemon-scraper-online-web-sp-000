@@ -7,3 +7,6 @@ def self.initialize(id:, name:, type:, db:)
   @type = type
   @db = db
 end
+
+
+end
