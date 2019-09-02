@@ -18,7 +18,6 @@ def self.find(id, db)
     poke.name = pokemon[0][1]
     poke.type = pokemon[0][2]
     poke
-  end
 end
 
 
